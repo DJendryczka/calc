@@ -1,6 +1,6 @@
 const screen = document.querySelector('.input')
 const buttons = document.querySelectorAll('button')
-const deleteButton = document.querySelector('.delete')
+let calculateValue
 
 buttons.forEach(button => button.addEventListener('click', () => calc(button)))
 
@@ -9,14 +9,16 @@ function calc(button){
     screen.textContent += value
     if ( value === 'AC'){
         screen.textContent = ''
+    }else if ( value === '='){
+        screen.textContent = eval(calculateValue)
+    }else if ( value === 'DEL'){
+        screen.textContent = calculateValue.slice(0, -1)
     }
-    
+    calculateValue = screen.textContent
+    console.log(calculateValue)
 }
 
-deleteButton.addEventListener('click', ()=>{
-    console.log('Klik')
-    
-})
+
 
 
 
