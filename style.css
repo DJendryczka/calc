@@ -14,7 +14,7 @@
     align-content: center;
     min-height: 100vh;
     grid-template-columns: repeat(4, 80px);
-    grid-template-rows: minmax(120px, auto) repeat(5, 80px);
+    grid-template-rows: minmax(80px, auto) repeat(5, 80px);
 }
 .calc-grid button{
     border: 2px solid whitesmoke;

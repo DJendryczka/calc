@@ -1,3 +1,19 @@
+const screen = document.querySelector('.input')
+const buttons = document.querySelectorAll('button')
+const deleteButton = document.querySelector('.delete')
+console.log(buttons)
+
+buttons.forEach(button => button.addEventListener('click', () => calc(button)))
+
+function calc(button){
+    const value = button.textContent
+    screen.textContent += value
+}
+
+deleteButton.addEventListener('click', ()=>{
+    console.log('Klik')
+    screen.textContent = ' '
+})
 
 
 
